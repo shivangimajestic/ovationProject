@@ -1,0 +1,61 @@
+.nav{
+    background:#0da39a;
+    justify-content:end;
+    color:white;
+}
+.name{
+    color:white;
+}
+.desig{
+    color:white;
+}
+.sidebar-wrapper{
+    /* background-image:url(../images/bg-themes/1.png); */
+    background: rgb(221,240,239);
+    background: linear-gradient(180deg, rgba(221,240,239,1) 23%, rgba(121,196,191,1) 56%, rgba(13,163,154,1)    100%);
+   
+}
+.sidebar-header{
+    background: transparent;
+ 
+}
+.back-btn{
+    color:white;
+}
+.logo-text{
+    color:white;  
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+
+}
+.sidebar-wrapper .metismenu a{
+    color:#054b46;
+}
+.sidebar-wrapper .metismenu a:hover{
+    background:rgb(255 255 255 / 18%);
+    /* color:white; */
+}
+.sidebar-wrapper .metismenu a:active{
+    background:rgb(255 255 255 / 18%);
+    /* color:white; */
+}
+
+.search-icon{
+    color:#0da39a;
+}
+
+.white{
+    color:white;
+}
+
+/* .logo-icon{
+    width: 200px;
+} */
+
+.toggle-icon{
+    color:#0da39a;
+}
+
+
+
