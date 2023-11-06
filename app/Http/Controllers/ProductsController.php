@@ -94,4 +94,11 @@ class ProductsController extends Controller
         $prdt->delete();
         return redirect('index')->with('trash','Product deleted');
     }
+
+    public function restore(Request $request , $id) 
+    {
+        $prdt = Products::find($id)->withTrashed()->restore();
+
+        return redirect('index')->withSuccess(__('User restored successfully.'));
+    }
 }
