@@ -1,4 +1,9 @@
 @include('admin.layout.header')
+<style>
+		svg {
+			display: none;
+		}
+	</style>
 
 <div class="page-wrapper">
 			<div class="page-content">
@@ -18,6 +23,9 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div>
+                {{ $products->links() }}
+                </div>
             </div>
 </div>
 @include('admin.layout.footer')
