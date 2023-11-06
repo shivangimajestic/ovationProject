@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('tags');
             $table->softDeletes();
             $table->timestamps();
+
         });
     }
 
@@ -29,5 +30,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('products');
+        
     }
 };
