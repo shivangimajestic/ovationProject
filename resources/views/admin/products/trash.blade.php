@@ -1,6 +1,8 @@
 
 @include('admin.layout.header')
 
+<link rel="stylesheet" href="{{asset('css/product/trash.css')}}">
+
 
 <!--start page wrapper -->
 <div class="page-wrapper">
@@ -54,7 +56,9 @@
                                         <td>
                                            
                                             <button class="btn btn-primary custom-btn"><a href="">
-													 Delete</a></button>
+												Restore</a></button>
+                                            <button class="btn btn-primary custom-btn"><a href="">
+												Delete</a></button>
                                         </td>
                                     </tr>
                                     @endforeach
