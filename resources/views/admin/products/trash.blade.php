@@ -1,6 +1,8 @@
 
 @include('admin.layout.header')
 
+<link rel="stylesheet" href="{{asset('css/product/trash.css')}}">
+
 
 <!--start page wrapper -->
 <div class="page-wrapper">
@@ -18,9 +20,7 @@
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;" class="prev-page"><i class="bx bx-home-alt"></i>Dashboard</a>
 								</li>
-                                <li class="breadcrumb-item">
-                                    <a href="{{ url('index') }}" class="prev-page" > 
-									    <i class='fadeIn animated bi bi-boxes'></i>Product</a>
+                                <li class="breadcrumb-item"><a href="javascript:;" class="prev-page">Products</a>
 								</li>
 								<li class="breadcrumb-item active" aria-current="page">Trash</li>
 							</ol>
@@ -56,7 +56,9 @@
                                         <td>
                                            
                                             <button class="btn btn-primary custom-btn"><a href="">
-													 Delete</a></button>
+												Restore</a></button>
+                                            <button class="btn btn-primary custom-btn"><a href="">
+												Delete</a></button>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -93,4 +95,5 @@
 	<!--app JS-->
 	<!-- <script src="{{asset('js/app.js')}}"></script> -->
 @include('admin.layout.footer')
+
 
