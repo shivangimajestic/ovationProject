@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreProductsRequest;
 use App\Http\Requests\UpdateProductsRequest;
 
@@ -13,7 +14,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Products::orderBy('id', 'DESC');
+        $products = Products::all();
         return view('admin/products/index' ,  compact('products'));
     }
 
@@ -22,15 +23,18 @@ class ProductsController extends Controller
      */
     public function create()
     {
-      
+      return view('admin/products/add');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProductsRequest $request)
+    public function store(Request $request)
     {
-        //
+        $prdt = new Products;
+        $prdt->prdt_name = $request->input('prdt-name');
+        $prdt->save();
+        return redirect()->back()->with('status','Product Added Successfully');
     }
 
     /**
@@ -46,7 +50,7 @@ class ProductsController extends Controller
      */
     public function edit(Products $products)
     {
-        //
+        return view('admin/products/edit');
     }
 
     /**
