@@ -17,11 +17,11 @@ class ProductsFactory extends Factory
     public function definition(): array
     {
         return [
-            'prdt_name'=> $this->faker->randomElement(['Microsurgery Sissors', 'Spevulums', 'Retractors','Caliper','Knives' , 'Hooks' , 'Baraquer Needle Holder']),
-            // 'prdt_category'=> $this->faker->randomElement(['Microsurgery Instrumennts', 'Cannulas', 'Eye Drapes','Knives']),
-            // 'user'=> $this->faker->firstName(),
-            // 'price'=> $this->faker->numberBetween(50,100),
-            // 'quantity'=>$this->faker->numberBetween(1,10),
+            'productName'=> $this->faker->randomElement(['Microsurgery Sissors', 'Spevulums', 'Retractors','Caliper','Knives' , 'Hooks' , 'Baraquer Needle Holder']),
+            'productPrice'=> $this->faker->numberBetween(50,100),
+            'SKU'=> $this->faker->bothify('??####??'),
+            'productCategory'=> $this->faker->randomElement(['Microsurgery Instrumennts', 'Cannulas', 'Eye Drapes','Knives']),
+            'tags'=> $this->faker->randomElement(['Best Seller', 'Special Offer', 'Disposable']),
         ];
     }
 }
