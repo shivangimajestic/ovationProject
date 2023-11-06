@@ -1,9 +1,35 @@
 @include('admin.layout.header')
+<style>
+		svg {
+			display: none;
+		}
+	</style>
 
 <link rel="stylesheet" href="{{asset('css/product/index.css')}}">
 <!--start page wrapper -->
 <div class="page-wrapper">
 			<div class="page-content">
+                <table>
+                    <thead>
+                        <tr>
+                            
+                            <td>product name</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($products as $item)
+                        <tr>
+                           
+                            <td>{{$item->prdt_name}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                <div>
+                {{ $products->links() }}
+                </div>
+            </div>
+
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
 					<!-- <div class="breadcrumb-title pe-3">Tables</div> -->
@@ -54,6 +80,7 @@
 				</div>
 				
 			</div>
+
 </div>
 		
         <!-- Bootstrap JS -->
