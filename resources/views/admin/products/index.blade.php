@@ -1,9 +1,9 @@
 @include('admin.layout.header')
-<style>
+<!-- <style>
 	.page-link{
     color: #0da39a;
 }
-</style>
+</style> -->
 
 <link rel="stylesheet" href="{{asset('css/product/index.css')}}">
 <!--start page wrapper -->
