@@ -55,7 +55,7 @@
                                         <td>{{$item->tags}}</td>
                                         <td>
                                            
-                                            <button class="btn btn-primary custom-btn"><a href="">
+                                            <button class="btn btn-primary custom-btn"><a href="{{ url('restore/'.$item->id)}}">
 												Restore</a></button>
                                             <button class="btn btn-primary custom-btn"><a href="">
 												Delete</a></button>
