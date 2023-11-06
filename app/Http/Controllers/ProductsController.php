@@ -53,7 +53,7 @@ class ProductsController extends Controller
      */
     public function show(Products $products)
     {
-        $trash = Products::onlyTrashed()->paginate(10);
+        $trash = Products::onlyTrashed()->paginate(99999999);
 
         return view('admin.products.trash', compact('trash'));
     }
@@ -100,5 +100,6 @@ class ProductsController extends Controller
         $prdt = Products::withTrashed()->findOrFail($id)->restore();
 
         return redirect('index')->with('restore','Question has been restored successfully!');
+
     }
 }
