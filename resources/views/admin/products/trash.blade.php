@@ -1,4 +1,7 @@
 
+
+
+
 @include('admin.layout.header')
 
 <link rel="stylesheet" href="{{asset('css/product/trash.css')}}">
@@ -55,7 +58,7 @@
                                         <td>{{$item->tags}}</td>
                                         <td>
                                            
-                                            <button class="btn btn-primary custom-btn"><a href="{{ url('restore/'.$item->id)}}">
+                                            <button class="btn btn-primary custom-btn"><a href="">
 												Restore</a></button>
                                             <button class="btn btn-primary custom-btn"><a href="">
 												Delete</a></button>
@@ -95,4 +98,6 @@
 	<!--app JS-->
 	<!-- <script src="{{asset('js/app.js')}}"></script> -->
 @include('admin.layout.footer')
+
+
 
