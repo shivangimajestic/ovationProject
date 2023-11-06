@@ -42,7 +42,7 @@
 					<img src="{{asset('images/logo-icon.png')}}" class="logo-icon" alt="logo icon">
 				</div>
 				<div>
-					<h4 class="logo-text">Rocker</h4>
+					<h4 class="logo-text">Ovation</h4>
 				</div>
 				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
 				</div>
@@ -50,7 +50,12 @@
 			<!--navigation-->
 			<ul class="metismenu menu" id="menu">
 				<li>
-					
+				<a href="javascript:;" >
+						<div class="parent-icon">
+                        <i class="bi bi-people"></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
 					
 				</li>
 				<li>
@@ -80,7 +85,7 @@
 					
 				</li>
 				<li>
-					<a  href="javascript:;">
+					<a  href="{{url('index')}}">
 						<div class="parent-icon">
                             <i class="bi bi-boxes"></i>
 						</div>

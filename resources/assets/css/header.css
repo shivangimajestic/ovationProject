@@ -11,9 +11,8 @@
 }
 .sidebar-wrapper{
     /* background-image:url(../images/bg-themes/1.png); */
-    background: rgb(221,240,239);
-    background: linear-gradient(180deg, rgba(221,240,239,1) 23%, rgba(121,196,191,1) 56%, rgba(13,163,154,1)    100%);
-   
+    background: rgb(13,163,154);
+    background: linear-gradient(180deg, rgba(13,163,154,1) 23%, rgba(121,196,191,1) 56%, rgba(221,240,239,1) 100%);
 }
 .sidebar-header{
     background: transparent;
@@ -30,20 +29,17 @@
 
 }
 .sidebar-wrapper .metismenu a{
-    color:#054b46;
+    color:white;
 }
 .sidebar-wrapper .metismenu a:hover{
     background:rgb(255 255 255 / 18%);
-    /* color:white; */
+    color:white;
 }
 .sidebar-wrapper .metismenu a:active{
     background:rgb(255 255 255 / 18%);
-    /* color:white; */
+    color:white;
 }
 
-.search-icon{
-    color:#0da39a;
-}
 
 .white{
     color:white;
@@ -54,7 +50,7 @@
 } */
 
 .toggle-icon{
-    color:#0da39a;
+    color:white;
 }
 
 
