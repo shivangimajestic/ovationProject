@@ -1,3 +1,4 @@
+
 @include('admin.layout.header')
 
 <link rel="stylesheet" href="{{asset('css/product/trash.css')}}">
@@ -94,3 +95,4 @@
 	<!--app JS-->
 	<!-- <script src="{{asset('js/app.js')}}"></script> -->
 @include('admin.layout.footer')
+
