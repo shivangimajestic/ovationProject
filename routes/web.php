@@ -27,14 +27,15 @@ Route::get('/', function () {
 
 
 Route::get('index', [ProductsController::class, 'index']);
+
 Route::get('admin/products/edit/{id}', [ProductsController::class, 'edit']);
 Route::put('admin/products/update/{id}', [ProductsController::class,'update']);
-Route::get('admin/products/add', [ProductsController::class, 'create']);
 
+Route::get('admin/products/add', [ProductsController::class, 'create']);
 Route::post('admin/products/add/store', [ProductsController::class, 'store'])->name('add.product');
 
 Route::get('admin/products/delete/{id}', [ProductsController::class, 'destroy']);
-
+Route::get('admin/products/trash',[ProductsController::class, 'show'])->withTrashed();
 
 
 
