@@ -59,7 +59,7 @@
 					
 				</li>
 				<li>
-					<a href="javascript:;" >
+					<a href="{{url('admin/customer/index')}}" >
 						<div class="parent-icon">
                         <i class="bi bi-people"></i>
 						</div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Http\Requests\StoreProductsRequest;
 use App\Http\Requests\UpdateProductsRequest;
 
@@ -15,7 +16,7 @@ class ProductsController extends Controller
     public function index()
     {
 
-        $products = Products::orderBy('id', 'DESC')->paginate(10);
+        //$products = Products::orderBy('id', 'DESC')->paginate(10);
 
         $products = Products::all();
 
@@ -36,9 +37,15 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         $prdt = new Products;
-        $prdt->prdt_name = $request->input('prdt-name');
+        $prdt->productName = $request->input('productName');
+        $prdt->productPrice= $request->input('productPrice');
+        $prdt->SKU= $request->input('SKU');
+        $prdt->productCategory= $request->input('productCategory');
+        $prdt->tags=$request->input('tags');
         $prdt->save();
-        return redirect()->back()->with('status','Product Added Successfully');
+        $products = Products::all();
+        return view('admin/products/index' ,  compact('products'));
+        //return redirect()->back()->with('status','Product Added Successfully');
     }
 
     /**
@@ -52,24 +59,37 @@ class ProductsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Products $products)
+    public function edit($id)
     {
-        return view('admin/products/edit');
+        $prdt = Products::find($id);
+        return view('admin/products/edit', compact('prdt'));
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductsRequest $request, Products $products)
+    public function update(Request $request , $id)
     {
-        //
+        $prdt = Products::find($id);
+        $prdt->productName = $request->input('productName');
+        $prdt->productPrice= $request->input('productPrice');
+        $prdt->SKU= $request->input('SKU');
+        $prdt->productCategory= $request->input('productCategory');
+        $prdt->tags=$request->input('tags');
+        $prdt->update();
+        $products = Products::all();
+        return view('admin/products/index' ,  compact('products'));
+        //return redirect()->back()->with('status','Product Added Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Products $products)
+    public function destroy(Request $request , $id)
     {
-        //
+        $prdt = Products::withTrashed()->find($id);
+        $prdt->delete();
+        return redirect('index')->with('trash','Product deleted');
     }
 }

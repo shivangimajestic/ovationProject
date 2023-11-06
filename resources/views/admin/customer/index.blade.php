@@ -12,16 +12,13 @@
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;" class="prev-page"><i class="bx bx-home-alt"></i>Dashboard</a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Products</li>
+								<li class="breadcrumb-item active" aria-current="page">Customers</li>
 							</ol>
 						</nav>
 					</div>
 					<div class="ms-auto">
-						<div>
 							<button type="button" class="btn btn-primary custom-btn">
-                            <a href="{{url('admin/products/add')}}" style="color:white;">Add Product</a></button>
-							<button type="button" class="btn btn-primary custom-btn">
-                            <a href="{{url('')}}" style="color:white;">Trash</a></button>
+                            <a href="{{url('admin/customer/add')}}" style="color:white;">Add Customer</a></button>
 						</div>
 					</div>
 				</div>
@@ -33,26 +30,32 @@
 							<table id="example" class="table table-striped table-bordered" style="width:100%">
 								<thead>
 									<tr>
-										<th>Product Name</th>
-										<th>Price</th>
-										<th>SKU</th>
-										<th>Category</th>
-										<th>Tags</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Email</th>
+										<th>Address Line1</th>
+										<th>Address Line2</th>
+										<th>City</th>
+										<th>State</th>
+										<th>Country</th>
                                         <th style="width:225px;">Action</th>
 										
 									</tr>
 								</thead>
 								<tbody>
-                                    @foreach($products as $item)
+                                    @foreach($customer as $data)
                                     <tr>
-                                        <td>{{$item->productName}}</td>
-                                        <td>{{$item->productPrice}}</td>
-                                        <td>{{$item->SKU}}</td>
-                                        <td>{{$item->productCategory}}</td>
-                                        <td>{{$item->tags}}</td>
+                                        <td>{{$data->firstName}}</td>
+                                        <td>{{$data->lastName}}</td>
+                                        <td>{{$data->email}}</td>
+                                        <td>{{$data->addLine1}}</td>
+                                        <td>{{$data->addLine2}}</td>
+                                        <td>{{$data->city}}</td>
+                                        <td>{{$data->state}}</td>
+                                        <td>{{$data->country}}</td>
                                         <td>
-                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/products/edit/'.$item->id)}}">Edit</a></button>
-                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/products/delete/'.$item->id)}}">
+                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/products/edit/'.$data->id)}}">Edit</a></button>
+                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/products/delete/'.$data->id)}}">
 													 Delete</a></button>
                                         </td>
                                     </tr>
