@@ -53,7 +53,7 @@ class ProductsController extends Controller
      */
     public function show(Products $products)
     {
-        $trash = Products::onlyTrashed();
+        $trash = Products::onlyTrashed()->paginate(10);
 
         return view('admin.products.trash', compact('trash'));
     }

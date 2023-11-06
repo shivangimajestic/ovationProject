@@ -1,0 +1,14 @@
+.prev-page {
+    color:#0da39a;
+}
+.custom-btn{
+    background-color: #0da39a;
+    color:white;   
+}
+.custom-btn a {
+    color:white;
+    text-decoration: none;
+}
+.custom-btn:hover{
+    background-color: #087d75;
+}
