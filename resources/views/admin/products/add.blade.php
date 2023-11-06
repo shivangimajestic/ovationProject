@@ -53,12 +53,40 @@
 						<form class="row pt-3" action="{{route('add.product')}}" method="POST">
 							@csrf
 							<div class="col-md-12">
-								<label for="prdt_name" class="form-label">Product Name*</label>
+								<label for="productName" class="form-label">Product Name*</label>
 								<div class="input-group">
 									<span class="input-group-text bg-transparent">
 										<i class="bx bx-store-alt"></i>
 									</span>
-									<input type="text" autofocus="autofocus" name="prdt_name" class="form-control  border-start-0" id="prdt_name" placeholder="Enter Product Name" required>
+									<input type="text" autofocus="autofocus" name="productName" class="form-control  border-start-0" id="productName" placeholder="Enter Product Name" required>
+								</div>
+								<label for="productPrice" class="form-label">Product Price*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="productPrice" class="form-control  border-start-0" id="productPrice" placeholder="Enter Product Price" required>
+								</div>
+								<label for="SKU" class="form-label">SKU*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="SKU" class="form-control  border-start-0" id="sku" placeholder="Enter SKU" required>
+								</div>
+								<label for="productCategory" class="form-label">Product Category*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="productCategory" class="form-control  border-start-0" id="productCategory" placeholder="Enter Product Category" required>
+								</div>
+								<label for="tags" class="form-label">Product Tags*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="tags" class="form-control  border-start-0" id="tags" placeholder="Enter Product Tags" required>
 								</div>
 							</div>
 							<div class="col-12 mt-3">
