@@ -14,3 +14,6 @@
 .border-secondary{
     border-color:#0da39a !important;
 }
+.input-group{
+    margin-bottom: 15px;
+}

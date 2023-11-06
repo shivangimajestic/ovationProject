@@ -1,5 +1,6 @@
 @include('admin.layout.header')
 <head>
+<link rel="stylesheet" href="{{asset('css/product/add.css')}}">
 
     
 </head>
@@ -52,40 +53,36 @@
 						<form class="row pt-3" action="" method="POST">
 							@csrf
 							<div class="col-md-12">
-								<label for="productName" class="form-label">Product Name*</label>
+                                <div class="d-flex gap-4">
+                                    <div class="col-md-5">
+                                        <label for="firstName" class="form-label">First Name*</label>
+                                        <div class="input-group">
+                                            
+                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter Product Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="firstName" class="form-label">First Name*</label>
+                                        <div class="input-group">
+                                            
+                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter Product Name" required>
+                                        </div>
+                                    </div>
+                                </div>
+								<label for="email" class="form-label">Email</label>
 								<div class="input-group">
-									<span class="input-group-text bg-transparent">
-										<i class="bx bx-store-alt"></i>
-									</span>
-									<input type="text" autofocus="autofocus" name="productName" class="form-control  border-start-0" id="productName" placeholder="Enter Product Name" required>
+									
+									<input type="email" autofocus="autofocus" name="email" class="form-control  " id="email" placeholder="Enter email address" required>
 								</div>
-								<label for="productPrice" class="form-label">Product Price*</label>
+								<label for="addLine1" class="form-label">Address Line1*</label>
 								<div class="input-group">
-									<span class="input-group-text bg-transparent">
-										<i class="bx bx-store-alt"></i>
-									</span>
-									<input type="text" autofocus="autofocus" name="productPrice" class="form-control  border-start-0" id="productPrice" placeholder="Enter Product Price" required>
+									
+									<input type="text" autofocus="autofocus" name="addLine1" class="form-control " id="addLine1" placeholder="Enter address" required>
 								</div>
-								<label for="SKU" class="form-label">SKU*</label>
+								<label for="addLine2" class="form-label">Address Line2*</label>
 								<div class="input-group">
-									<span class="input-group-text bg-transparent">
-										<i class="bx bx-store-alt"></i>
-									</span>
-									<input type="text" autofocus="autofocus" name="SKU" class="form-control  border-start-0" id="sku" placeholder="Enter SKU" required>
-								</div>
-								<label for="productCategory" class="form-label">Product Category*</label>
-								<div class="input-group">
-									<span class="input-group-text bg-transparent">
-										<i class="bx bx-store-alt"></i>
-									</span>
-									<input type="text" autofocus="autofocus" name="productCategory" class="form-control  border-start-0" id="productCategory" placeholder="Enter Product Category" required>
-								</div>
-								<label for="tags" class="form-label">Product Tags*</label>
-								<div class="input-group">
-									<span class="input-group-text bg-transparent">
-										<i class="bx bx-store-alt"></i>
-									</span>
-									<input type="text" autofocus="autofocus" name="tags" class="form-control  border-start-0" id="tags" placeholder="Enter Product Tags" required>
+									
+									<input type="text" autofocus="autofocus" name="addLine2" class="form-control  " id="addLine2" placeholder="Enter address" >
 								</div>
 							</div>
 							<div class="col-12 mt-3">

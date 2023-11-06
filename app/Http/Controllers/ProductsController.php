@@ -95,10 +95,11 @@ class ProductsController extends Controller
         return redirect('index')->with('trash','Product deleted');
     }
 
-    public function restore(Request $request , $id) 
+    public function restore( $id) 
     {
-        $prdt = Products::find($id)->withTrashed();
-        $prdt = restore();
-        return redirect('index')->withSuccess(__('User restored successfully.'));
+        $prdt = Products::withTrashed()->findOrFail($id)->restore();
+
+        return redirect('index')->with('restore','Question has been restored successfully!');
+
     }
 }
