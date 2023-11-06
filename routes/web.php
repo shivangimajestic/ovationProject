@@ -35,7 +35,11 @@ Route::get('admin/products/add', [ProductsController::class, 'create']);
 Route::post('admin/products/add/store', [ProductsController::class, 'store'])->name('add.product');
 
 Route::get('admin/products/delete/{id}', [ProductsController::class, 'destroy']);
+
+Route::post('admin/products/restore/{id}', [ProductsController::class, 'restore']);
+
 Route::get('admin/products/trash',[ProductsController::class, 'show'])->withTrashed();
+
 
 
 
