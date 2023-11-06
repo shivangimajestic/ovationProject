@@ -16,7 +16,7 @@
                                     <i class="bx bx-home-alt"></i>Dashboard</a>
                                     
 								</li>
-								<li class="breadcrumb-item dashboard-li"><a href="{{url('admin/store/index')}}" class="prev-page">
+								<li class="breadcrumb-item dashboard-li"><a href="{{ url('index') }}" class="prev-page">
                                     <i class="bx bx-store-alt"></i>Product</a>
                                     
 								</li>
@@ -43,21 +43,48 @@
                             <h5 class="mb-0 ">Edit Product</h5>
                         </div>
                         <hr/>
-						<form class="row pt-3" action="" method="POST">
+						<form class="row pt-3" action="{{url('admin/products/update/'.$prdt->id)}}" method="POST">
 							@csrf
                             @method('PUT')
 							<div class="col-md-12">
-								<label for="storeType" class="form-label">Product*</label>
+								<label for="productName" class="form-label">Product Name*</label>
 								<div class="input-group">
 									<span class="input-group-text bg-transparent">
 										<i class="bx bx-store-alt"></i>
 									</span>
-									<input type="text" autofocus="autofocus" name="storeType" class="form-control  border-start-0" id="question" value="" required>
-
+									<input type="text" autofocus="autofocus" name="productName" value="{{$prdt->productName}}" class="form-control  border-start-0" id="productName" required>
+								</div>
+								<label for="productPrice" class="form-label">Product Price*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="productPrice" value="{{$prdt->productPrice}}" class="form-control  border-start-0" id="productPrice" required>
+								</div>
+								<label for="SKU" class="form-label">Product SKU*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="SKU" value="{{$prdt->SKU}}" class="form-control  border-start-0" id="sku" required>
+								</div>
+								<label for="productCategory" class="form-label">Product Category*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="productCategory" value="{{$prdt->productCategory}}" class="form-control  border-start-0" id="productCategory" required>
+								</div>
+								<label for="tags" class="form-label">Product Tags*</label>
+								<div class="input-group">
+									<span class="input-group-text bg-transparent">
+										<i class="bx bx-store-alt"></i>
+									</span>
+									<input type="text" autofocus="autofocus" name="tags" value="{{$prdt->tags}}" class="form-control  border-start-0" id="tags" required>
 								</div>
 							</div>
 							<div class="col-12 mt-3">
-								<button type="submit" class=" px-5  btn btn-primary custom-btn">Edit Product</button>
+								<button type="submit" class=" px-5  btn btn-primary custom-btn"><a href="{{ url('index') }}"></a>Edit Product</button>
 								<button  type="reset" class=" px-5 btn btn-primary custom-btn" value="Reset">Reset</button>
 							</div>
 						</form>
