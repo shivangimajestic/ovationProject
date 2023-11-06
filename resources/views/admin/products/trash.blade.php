@@ -18,7 +18,9 @@
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;" class="prev-page"><i class="bx bx-home-alt"></i>Dashboard</a>
 								</li>
-                                <li class="breadcrumb-item"><a href="javascript:;" class="prev-page">Products</a>
+                                <li class="breadcrumb-item">
+                                    <a href="{{ url('index') }}" class="prev-page" > 
+									    <i class='fadeIn animated bi bi-boxes'></i>Product</a>
 								</li>
 								<li class="breadcrumb-item active" aria-current="page">Trash</li>
 							</ol>
