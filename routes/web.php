@@ -19,7 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/index', [ProductsController::class, 'index']);
+
+Route::get('index', [ProductsController::class, 'index']);
+Route::get('admin/products/edit', [ProductsController::class, 'edit']);
+Route::get('admin/products/add', [ProductsController::class, 'create']);
+
+Route::post('admin/products/add/store', [ProductsController::class, 'store'])->name('add.product');
 
 
 
