@@ -96,4 +96,3 @@
 	<!-- <script src="{{asset('js/app.js')}}"></script> -->
 @include('admin.layout.footer')
 
-
