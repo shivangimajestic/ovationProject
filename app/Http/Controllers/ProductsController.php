@@ -53,7 +53,9 @@ class ProductsController extends Controller
      */
     public function show(Products $products)
     {
-        //
+        $trash = Products::onlyTrashed();
+
+        return view('admin.products.trash', compact('trash'));
     }
 
     /**
@@ -88,7 +90,7 @@ class ProductsController extends Controller
      */
     public function destroy(Request $request , $id)
     {
-        $prdt = Products::withTrashed()->find($id);
+        $prdt = Products::find($id);
         $prdt->delete();
         return redirect('index')->with('trash','Product deleted');
     }

@@ -31,7 +31,7 @@
 							<button type="button" class="btn btn-primary custom-btn">
                             <a href="{{url('admin/products/add')}}" style="color:white;">Add Product</a></button>
 							<button type="button" class="btn btn-primary custom-btn">
-                            <a href="{{url('')}}" style="color:white;">Trash</a></button>
+                            <a href="{{url('admin/products/trash')}}" style="color:white;">Trash</a></button>
 						</div>
 					</div>
 				</div>
