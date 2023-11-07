@@ -19,6 +19,9 @@
 					<div class="ms-auto">
 							<button type="button" class="btn btn-primary custom-btn">
                             <a href="{{url('admin/customer/add')}}" style="color:white;">Add Customer</a></button>
+							
+							<button type="button" class="btn btn-primary custom-btn">
+                            <a href="" style="color:white;">Trash</a></button>
 						</div>
 					</div>
 				</div>
@@ -54,8 +57,8 @@
                                         <td>{{$data->state}}</td>
                                         <td>{{$data->country}}</td>
                                         <td>
-                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/products/edit/'.$data->id)}}">Edit</a></button>
-                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/products/delete/'.$data->id)}}">
+                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/customer/edit')}}">Edit</a></button>
+                                            <button class="btn btn-primary custom-btn"><a href="">
 													 Delete</a></button>
                                         </td>
                                     </tr>

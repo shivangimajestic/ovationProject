@@ -20,14 +20,14 @@
 								</li>
 
 								<li class="breadcrumb-item dashboard-li" >
-									<a href="" class="prev-page" > 
-										<i class='fadeIn animated bi bi-boxes'></i>
-                                    Product</a>
+									<a href="{{url('admin/customer/index')}}" class="prev-page" > 
+										<i class='fadeIn animated bi bi-people'></i>
+                                    Customers</a>
 								</li>
 
 								<li class="breadcrumb-item  active">
                                     <i class="fadeIn animated bx bx-list-plus"></i>
-                                    Add Product
+                                    Add Customer
 								</li>
 
 								
@@ -45,27 +45,27 @@
 					<div class="card-body p-5">
                         <div class="card-title d-flex align-items-center">
                             <div>
-                                <i class="bi bi-boxes me-1 font-22 text-green"></i>
+                                <i class="bi bi-people me-1 font-22 text-green"></i>
                             </div>
-                            <h5 class="mb-0 ">Add Product</h5>
+                            <h5 class="mb-0 ">Add Customer</h5>
                         </div>
                         <hr/>
 						<form class="row pt-3" action="" method="POST">
 							@csrf
 							<div class="col-md-12">
-                                <div class="d-flex gap-4">
-                                    <div class="col-md-5">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-md-6 me-2">
                                         <label for="firstName" class="form-label">First Name*</label>
                                         <div class="input-group">
                                             
-                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter Product Name" required>
+                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter First Name" required>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
-                                        <label for="firstName" class="form-label">First Name*</label>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name*</label>
                                         <div class="input-group">
                                             
-                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter Product Name" required>
+                                            <input type="text" autofocus="autofocus" name="lastName" class="form-control  " id="lastName" placeholder="Enter Last Name" required>
                                         </div>
                                     </div>
                                 </div>
@@ -74,20 +74,43 @@
 									
 									<input type="email" autofocus="autofocus" name="email" class="form-control  " id="email" placeholder="Enter email address" required>
 								</div>
-								<label for="addLine1" class="form-label">Address Line1*</label>
-								<div class="input-group">
-									
-									<input type="text" autofocus="autofocus" name="addLine1" class="form-control " id="addLine1" placeholder="Enter address" required>
+								<div class="d-flex justify-content-between">
+									<div class="col-md-6 me-2">
+										<label for="addLine1" class="form-label">Address Line1*</label>
+										<div class="input-group">
+											
+											<input type="text" autofocus="autofocus" name="addLine1" class="form-control " id="addLine1" placeholder="Enter address" required>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<label for="addLine2" class="form-label">Address Line2*</label>
+										<div class="input-group">
+											
+											<input type="text" autofocus="autofocus" name="addLine2" class="form-control  " id="addLine2" placeholder="Enter address" >
+										</div>
+									</div>
 								</div>
-								<label for="addLine2" class="form-label">Address Line2*</label>
-								<div class="input-group">
-									
-									<input type="text" autofocus="autofocus" name="addLine2" class="form-control  " id="addLine2" placeholder="Enter address" >
+
+								<div class="d-flex">
+									<div class="col-md-4 me-2">
+										<label for="city" class="form-label">City*</label>
+										<input type="text" autofocus="autofocus" name="city" class="form-control  " id="city" placeholder="Enter city" >
+									</div>
+
+									<div class="col-md-4 me-2" >
+										<label for="state" class="form-label">State*</label>
+										<input type="text" autofocus="autofocus" name="state" class="form-control  " id="state" placeholder="Enter state" >
+									</div>
+
+									<div class="col-md-4">
+										<label for="country" class="form-label">Country*</label>
+										<input type="text" autofocus="autofocus" name="country" class="form-control  " id="country" placeholder="Enter country" >
+									</div>
 								</div>
 							</div>
                             
 							<div class="col-12 mt-3">
-								<button type="submit" class="btn btn-primary px-5 custom-btn">Add Product</button>
+								<button type="submit" class="btn btn-primary px-5 custom-btn">Add Customer</button>
 							</div>
 						</form>
 						
