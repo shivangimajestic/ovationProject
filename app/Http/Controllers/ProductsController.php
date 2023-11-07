@@ -53,7 +53,9 @@ class ProductsController extends Controller
      */
     public function show(Products $products)
     {
+
         $trash = Products::onlyTrashed()->paginate(99999999);
+
 
         return view('admin.products.trash', compact('trash'));
     }

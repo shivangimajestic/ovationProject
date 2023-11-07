@@ -85,6 +85,7 @@
 									<input type="text" autofocus="autofocus" name="addLine2" class="form-control  " id="addLine2" placeholder="Enter address" >
 								</div>
 							</div>
+                            
 							<div class="col-12 mt-3">
 								<button type="submit" class="btn btn-primary px-5 custom-btn">Add Product</button>
 							</div>
