@@ -48,7 +48,7 @@ class CustomerController extends Controller
      */
     public function edit(Customer $customer)
     {
-        //
+        return view('admin/customer/edit');
     }
 
     /**

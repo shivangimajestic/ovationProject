@@ -48,6 +48,8 @@ Route::get('admin/products/trash',[ProductsController::class, 'show'])->withTras
 Route::get('admin/customer/index', [CustomerController::class, 'index']);
 Route::get('admin/customer/add', [CustomerController::class, 'create']);
 
+Route::get('admin/customer/edit', [CustomerController::class, 'edit']);
+
 
 
 // Route::get('/dashboard', function () {
