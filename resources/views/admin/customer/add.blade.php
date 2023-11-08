@@ -109,21 +109,6 @@
 										<input type="text" autofocus="autofocus" name="country" class="form-control  " id="country" placeholder="Enter country" >
 									</div>
 								</div>
-								<label for="city" class="form-label">City*</label>
-								<div class="input-group">
-									
-									<input type="text" autofocus="autofocus" name="city" class="form-control  " id="city" placeholder="Enter city" >
-								</div>
-								<label for="state" class="form-label">State*</label>
-								<div class="input-group">
-									
-									<input type="text" autofocus="autofocus" name="state" class="form-control  " id="state" placeholder="Enter state" >
-								</div>
-								<label for="country" class="form-label">Country*</label>
-								<div class="input-group">
-									
-									<input type="text" autofocus="autofocus" name="country" class="form-control  " id="country" placeholder="Enter country" >
-								</div>
 							</div>
                             
 							<div class="col-12 mt-3">

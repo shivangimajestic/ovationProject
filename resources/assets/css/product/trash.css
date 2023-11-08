@@ -12,4 +12,12 @@
 .custom-btn:hover{
     background-color: #087d75;
 }
-
+.dataTables_filter{
+    float: inline-end;
+}
+.page-link{
+    color: #0da39a;
+}
+.pagination{
+    float:inline-end;
+}
