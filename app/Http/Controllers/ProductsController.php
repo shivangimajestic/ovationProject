@@ -17,7 +17,6 @@ class ProductsController extends Controller
     {
 
         //$products = Products::orderBy('id', 'DESC')->paginate(10);
-
         $products = Products::all();
 
         return view('admin/products/index' ,  compact('products'));
@@ -96,12 +95,19 @@ class ProductsController extends Controller
         $prdt->delete();
         return redirect('index')->with('trash','Product deleted');
     }
+    public function force_destroy($id)
+    {
+        $prdt = Products::find($id);
+       $prdt->forceDelete();
+       return redirect()->back()->with('trash','product deleted');
+
+    }
 
     public function restore( $id) 
     {
         $prdt = Products::withTrashed()->findOrFail($id)->restore();
-
-        return redirect('index')->with('restore','Question has been restored successfully!');
+        $prdt->restore();
+        return redirect('index')->with('restore','Product has been restored successfully!');
 
     }
 }

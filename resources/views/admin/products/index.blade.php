@@ -33,6 +33,7 @@
 							<button type="button" class="btn btn-primary custom-btn">
                             <a href="{{url('admin/products/trash')}}" style="color:white;">Trash</a></button>
 						</div>
+						<div></div>
 					</div>
 				</div>
 				<!--end breadcrumb-->
