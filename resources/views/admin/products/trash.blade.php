@@ -58,7 +58,7 @@
                                            
                                             <button class="btn btn-primary custom-btn"><a href="{{ url('index') }}">
 												Restore</a></button>
-                                            <button class="btn btn-primary custom-btn"><a href="">
+                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/product/forcedelete/'.$item->id)}}">
 												Delete</a></button>
                                         </td>
                                     </tr>

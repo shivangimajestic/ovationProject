@@ -30,15 +30,12 @@ Route::get('index', [ProductsController::class, 'index']);
 
 Route::get('admin/products/edit/{id}', [ProductsController::class, 'edit']);
 Route::put('admin/products/update/{id}', [ProductsController::class,'update']);
-
 Route::get('admin/products/add', [ProductsController::class, 'create']);
 Route::post('admin/products/add/store', [ProductsController::class, 'store'])->name('add.product');
-
 Route::get('admin/products/delete/{id}', [ProductsController::class, 'destroy']);
-
-Route::get('admin/products/restore/{id}', [ProductsController::class, 'restore']);
-
+Route::get('admin/products/restore/{id}', [ProductsController::class, 'restore'])->name('restore.product');
 Route::get('admin/products/trash',[ProductsController::class, 'show'])->withTrashed();
+Route::get('admin/products/forcedelete/{id}',[ProductsController::class,'force_destroy']);
 
 
 
@@ -50,8 +47,8 @@ Route::get('admin/customer/add', [CustomerController::class, 'create']);
 Route::post('admin/customer/add/store', [CustomerController::class, 'store'])->name('add.customer');
 Route::get('admin/customer/edit/{id}', [CustomerController::class, 'edit']);
 Route::put('admin/customer/update/{id}', [CustomerController::class,'update']);
-
 Route::get('admin/customer/edit', [CustomerController::class, 'edit']);
+Route::get('admin/customer/delete/{id}', [CustomerController::class, 'destroy']);
 
 
 
