@@ -50,22 +50,22 @@
                             <h5 class="mb-0 ">Add Product</h5>
                         </div>
                         <hr/>
-						<form class="row pt-3" action="" method="POST">
+						<form class="row pt-3" action="{{route('add.customer')}}" method="POST">
 							@csrf
 							<div class="col-md-12">
-                                <div class="d-flex gap-4">
-                                    <div class="col-md-5">
+                                <div class="d-flex gap-1">
+                                    <div class="col-md-6">
                                         <label for="firstName" class="form-label">First Name*</label>
                                         <div class="input-group">
                                             
-                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter Product Name" required>
+                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter First Name" required>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
-                                        <label for="firstName" class="form-label">First Name*</label>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name*</label>
                                         <div class="input-group">
                                             
-                                            <input type="text" autofocus="autofocus" name="firstName" class="form-control  " id="firstName" placeholder="Enter Product Name" required>
+                                            <input type="text" autofocus="autofocus" name="lastName" class="form-control  " id="lastName" placeholder="Enter Last Name" required>
                                         </div>
                                     </div>
                                 </div>
@@ -83,6 +83,21 @@
 								<div class="input-group">
 									
 									<input type="text" autofocus="autofocus" name="addLine2" class="form-control  " id="addLine2" placeholder="Enter address" >
+								</div>
+								<label for="city" class="form-label">City*</label>
+								<div class="input-group">
+									
+									<input type="text" autofocus="autofocus" name="city" class="form-control  " id="city" placeholder="Enter city" >
+								</div>
+								<label for="state" class="form-label">State*</label>
+								<div class="input-group">
+									
+									<input type="text" autofocus="autofocus" name="state" class="form-control  " id="state" placeholder="Enter state" >
+								</div>
+								<label for="country" class="form-label">Country*</label>
+								<div class="input-group">
+									
+									<input type="text" autofocus="autofocus" name="country" class="form-control  " id="country" placeholder="Enter country" >
 								</div>
 							</div>
 							<div class="col-12 mt-3">

@@ -1,6 +1,3 @@
-
-
-
 @include('admin.layout.header')
 
 <link rel="stylesheet" href="{{asset('css/product/trash.css')}}">
@@ -59,7 +56,7 @@
                                         <td>{{$item->tags}}</td>
                                         <td>
                                            
-                                            <button class="btn btn-primary custom-btn"><a href="">
+                                            <button class="btn btn-primary custom-btn"><a href="{{ url('index') }}">
 												Restore</a></button>
                                             <button class="btn btn-primary custom-btn"><a href="">
 												Delete</a></button>
@@ -75,10 +72,7 @@
 				</div>
 
 	</div>
-
-
 			</div>
-
 </div>
 		
         <!-- Bootstrap JS -->
