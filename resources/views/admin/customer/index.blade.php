@@ -57,8 +57,10 @@
                                         <td>{{$data->state}}</td>
                                         <td>{{$data->country}}</td>
                                         <td>
-                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/customer/edit')}}">Edit</a></button>
-                                            <button class="btn btn-primary custom-btn"><a href="">
+
+                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/customer/edit/'.$data->id)}}">Edit</a></button>
+                                            <button class="btn btn-primary custom-btn"><a href="{{url('admin/customer/delete/'.$data->id)}}">
+
 													 Delete</a></button>
                                         </td>
                                     </tr>
