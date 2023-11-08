@@ -73,7 +73,23 @@
 									</span>
 									<input type="email" autofocus="autofocus" name="email" value="{{$customer->email}}" class="form-control  border-start-0" id="email" required>
 								</div>
-								<label for="addLine1" class="form-label">Address Line1*</label>
+								<div class="d-flex justify-content-between">
+									<div class="col-md-6 me-2">
+										<label for="addLine1" class="form-label">Address Line1*</label>
+										<div class="input-group">
+											
+											<input type="text" autofocus="autofocus" name="addLine1" value="{{$customer->addLine1}}" class="form-control " id="addLine1" placeholder="Enter address" required>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<label for="addLine2" class="form-label">Address Line2*</label>
+										<div class="input-group">
+											
+											<input type="text" autofocus="autofocus" name="addLine2" value="{{$customer->addLine2}}" class="form-control  " id="addLine2" placeholder="Enter address" >
+										</div>
+									</div>
+								</div>
+								<!-- <label for="addLine1" class="form-label">Address Line1*</label>
 								<div class="input-group">
 									<span class="input-group-text bg-transparent">
 										<i class="bx bx-store-alt"></i>
@@ -86,8 +102,24 @@
 										<i class="bx bx-store-alt"></i>
 									</span>
 									<input type="text" autofocus="autofocus" name="addLine2" value="{{$customer->addLine2}}" class="form-control  border-start-0" id="addLine2" required>
+								</div> -->
+								<div class="d-flex">
+									<div class="col-md-4 me-2">
+										<label for="city" class="form-label">City*</label>
+										<input type="text" autofocus="autofocus" name="city" value="{{$customer->city}}" class="form-control  " id="city" placeholder="Enter city" >
+									</div>
+
+									<div class="col-md-4 me-2" >
+										<label for="state" class="form-label">State*</label>
+										<input type="text" autofocus="autofocus" name="state"  value="{{$customer->state}}" class="form-control  " id="state" placeholder="Enter state" >
+									</div>
+
+									<div class="col-md-4">
+										<label for="country" class="form-label">Country*</label>
+										<input type="text" autofocus="autofocus" name="country" value="{{$customer->country}}" class="form-control  " id="country" placeholder="Enter country" >
+									</div>
 								</div>
-								<label for="city" class="form-label">City*</label>
+								<!-- <label for="city" class="form-label">City*</label>
 								<div class="input-group">
 									<span class="input-group-text bg-transparent">
 										<i class="bx bx-store-alt"></i>
@@ -107,7 +139,7 @@
 										<i class="bx bx-store-alt"></i>
 									</span>
 									<input type="text" autofocus="autofocus" name="country" value="{{$customer->country}}" class="form-control  border-start-0" id="country" required>
-								</div>
+								</div> -->
 							</div>
 							<div class="col-12 mt-3">
 								<button type="submit" class=" px-5  btn btn-primary custom-btn"><a href="{{ url('admin/customer/index') }}"></a>Edit Customer</button>
