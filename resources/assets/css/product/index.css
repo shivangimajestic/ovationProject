@@ -15,3 +15,12 @@
 .page-link{
     color: #0da39a;
 }
+.pagination{
+    float:inline-end;
+   
+
+}
+
+.dataTables_filter{
+    float: inline-end;
+}

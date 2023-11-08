@@ -51,6 +51,8 @@ Route::post('admin/customer/add/store', [CustomerController::class, 'store'])->n
 Route::get('admin/customer/edit/{id}', [CustomerController::class, 'edit']);
 Route::put('admin/customer/update/{id}', [CustomerController::class,'update']);
 
+Route::get('admin/customer/edit', [CustomerController::class, 'edit']);
+
 
 
 // Route::get('/dashboard', function () {
