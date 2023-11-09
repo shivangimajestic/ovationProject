@@ -20,14 +20,14 @@
 								</li>
 
 								<li class="breadcrumb-item dashboard-li" >
-									<a href="{{ url('index') }}" class="prev-page" > 
+									<a href="{{ url('admin/categories/index') }}" class="prev-page" > 
 										<i class='fadeIn animated bi bi-boxes'></i>
-                                    Product</a>
+                                    Category</a>
 								</li>
 
 								<li class="breadcrumb-item  active">
                                     <i class="fadeIn animated bx bx-list-plus"></i>
-                                    Add Product
+                                    Add Category
 								</li>
 
 								
@@ -47,46 +47,32 @@
                             <div>
                                 <i class="bi bi-boxes me-1 font-22 text-green"></i>
                             </div>
-                            <h5 class="mb-0 ">Add Product</h5>
+                            <h5 class="mb-0 ">Add Category</h5>
                         </div>
                         <hr/>
-						<form class="row pt-3" action="{{route('add.product')}}" method="POST">
+						<form class="row pt-3" action="{{route('add.categories')}}" method="POST">
 							@csrf
 							<div class="col-md-12">
-								<label for="productName" class="form-label">Product Name*</label>
+								<label for="categoryImage" class="form-label">Category Image*</label>
 								<div class="input-group">
 									<span class="input-group-text bg-transparent">
 										<i class="bx bx-store-alt"></i>
 									</span>
-									<input type="text" autofocus="autofocus" name="productName" class="form-control  border-start-0" id="productName" placeholder="Enter Product Name" required>
+									<input type="file" autofocus="autofocus" src="categoryImage" name="categoryImage" class="form-control  border-start-0" id="categoryImage" placeholder="Choose file" required>
 								</div>
-								<label for="productPrice" class="form-label">Product Price*</label>
+								<label for="categoryName" class="form-label">Category Name*</label>
 								<div class="input-group">
 									<span class="input-group-text bg-transparent">
 										<i class="bx bx-store-alt"></i>
 									</span>
-									<input type="text" autofocus="autofocus" name="productPrice" class="form-control  border-start-0" id="productPrice" placeholder="Enter Product Price" required>
+									<input type="text" autofocus="autofocus" name="categoryName" class="form-control  border-start-0" id="categoryName" placeholder="Enter Category Name" required>
 								</div>
-								<label for="SKU" class="form-label">SKU*</label>
+								<label for="categoryDetails" class="form-label">Category Details*</label>
 								<div class="input-group">
 									<span class="input-group-text bg-transparent">
 										<i class="bx bx-store-alt"></i>
 									</span>
-									<input type="text" autofocus="autofocus" name="SKU" class="form-control  border-start-0" id="sku" placeholder="Enter SKU" required>
-								</div>
-								<label for="productCategory" class="form-label">Product Category*</label>
-								<div class="input-group">
-									<span class="input-group-text bg-transparent">
-										<i class="bx bx-store-alt"></i>
-									</span>
-									<input type="text" autofocus="autofocus" name="productCategory" class="form-control  border-start-0" id="productCategory" placeholder="Enter Product Category" required>
-								</div>
-								<label for="tags" class="form-label">Product Tags*</label>
-								<div class="input-group">
-									<span class="input-group-text bg-transparent">
-										<i class="bx bx-store-alt"></i>
-									</span>
-									<input type="text" autofocus="autofocus" name="tags" class="form-control  border-start-0" id="tags" placeholder="Enter Product Tags" required>
+									<input type="text" autofocus="autofocus" name="categoryDetails" class="form-control  border-start-0" id="categoryDetails" placeholder="Enter Category Details" required>
 								</div>
 							</div>
 							<div class="col-12 mt-3">

@@ -44,7 +44,7 @@
 				<div>
 					<h4 class="logo-text">Ovation</h4>
 				</div>
-				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+				<div class="toggle-icon ms-auto"><i class="bi bi-arrow-left"></i>
 				</div>
 			</div>
 			<!--navigation-->
@@ -52,7 +52,7 @@
 				<li>
 				<a href="javascript:;" >
 						<div class="parent-icon">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-layout-sidebar"></i>
 						</div>
 						<div class="menu-title">Dashboard</div>
 					</a>
@@ -76,9 +76,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="javascript:;" >
+					<a href="{{url('admin/categories/index')}}" >
 						<div class="parent-icon">
-                        <i class='fadeIn animated bx bx-category'></i>
+                        <i class="bi bi-grid"></i>
 						</div>
 						<div class="menu-title">Categories</div>
 					</a>
@@ -98,7 +98,7 @@
 				
 				<li>
 					<a  href="javascript:;">
-						<div class="parent-icon"><i class="fadeIn animated bx bx-receipt"></i>
+						<div class="parent-icon"><i class="bi bi-receipt-cutoff"></i>
 						</div>
 						<div class="menu-title">Orders/Bills</div>
 					</a>
