@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,6 +50,21 @@ Route::get('admin/customer/edit/{id}', [CustomerController::class, 'edit']);
 Route::put('admin/customer/update/{id}', [CustomerController::class,'update']);
 Route::get('admin/customer/edit', [CustomerController::class, 'edit']);
 Route::get('admin/customer/delete/{id}', [CustomerController::class, 'destroy']);
+
+
+
+
+//Route for category page
+Route::get('admin/categories/index', [CategoriesController::class, 'index']);
+Route::get('admin/categories/add', [CategoriesController::class, 'create']);
+Route::post('admin/categories/add/store', [CategoriesController::class, 'store'])->name('add.categories');
+Route::get('admin/categories/delete/{id}', [CategoriesController::class, 'destroy']);
+
+
+
+
+
+
 
 
 
