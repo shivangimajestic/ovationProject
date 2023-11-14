@@ -52,17 +52,24 @@ class CategoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categories $categories)
+    public function edit($id)
     {
-        //
+        $categories = Categories::find($id);
+        return view('admin/categories/edit', compact('categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoriesRequest $request, Categories $categories)
+    public function update(Request $request, $id)
     {
-        //
+        $categories = Categories::find($id);
+        $categories->categoryImage = $request->input('categoryImage');   //base64_encode()
+        $categories->categoryName= $request->input('categoryName');
+        $categories->categoryDetails= $request->input('categoryDetails');
+        $categories->update();
+        $categories = Categories::all();
+        return view('admin/categories/index' ,  compact('categories'));
     }
 
     /**

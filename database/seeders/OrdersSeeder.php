@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\Orders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +12,6 @@ class OrdersSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Orders::factory(30)->create();
     }
 }
