@@ -97,7 +97,7 @@
 				
 				
 				<li>
-					<a  href="javascript:;">
+					<a  href="{{url('admin/orders/index')}}">
 						<div class="parent-icon"><i class="bi bi-receipt-cutoff"></i>
 						</div>
 						<div class="menu-title">Orders/Bills</div>

@@ -13,7 +13,9 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Orders::all();
+
+        return view('admin/orders/index' ,  compact('orders'));
     }
 
     /**
@@ -35,9 +37,10 @@ class OrdersController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Orders $orders)
+    public function show($id)
     {
-        //
+        $orders = Orders::find($id);
+        return view('admin/orders/view' ,  compact('orders'));
     }
 
     /**

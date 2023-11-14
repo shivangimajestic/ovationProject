@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
@@ -59,6 +60,15 @@ Route::get('admin/categories/index', [CategoriesController::class, 'index']);
 Route::get('admin/categories/add', [CategoriesController::class, 'create']);
 Route::post('admin/categories/add/store', [CategoriesController::class, 'store'])->name('add.categories');
 Route::get('admin/categories/delete/{id}', [CategoriesController::class, 'destroy']);
+Route::get('admin/categories/edit/{id}', [CategoriesController::class, 'edit']);
+Route::put('admin/categories/update/{id}', [CategoriesController::class,'update']);
+
+
+
+//Route for order/bill page
+Route::get('admin/orders/index', [OrdersController::class, 'index']);
+Route::get('admin/orders/view/{id}', [OrdersController::class, 'show']);
+
 
 
 
