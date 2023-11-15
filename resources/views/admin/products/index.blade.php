@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" href="{{asset('css/product/index.css')}}">
 <!--start page wrapper -->
+<div>11111111</div>
 <div class="page-wrapper">
 
 	<div class="page-content">

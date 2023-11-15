@@ -130,12 +130,7 @@
 
 												</div>
 											</div>
-
-
-
 										</div>
-                                        <!-- <a class="btn btn-primary add-list" id="print">Print</a> -->
-
 									</div>
 								</div>
 
@@ -179,7 +174,7 @@
     //         };
     //         html2pdf().from(invoice).set(opt).save();
     //     })
-}
+	// }
 	</script>
 	
 	<!--app JS-->
