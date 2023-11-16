@@ -9,6 +9,7 @@ use App\Http\Requests\StoreProductsRequest;
 use App\Http\Requests\UpdateProductsRequest;
 use Illuminate\View\View;
 
+
 class ProductsController extends Controller
 {
     /**

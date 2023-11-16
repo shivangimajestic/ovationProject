@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('orderNumber')->unique();
-            $table->json('orderDetails');
+            $table->longText('orderDetails');
             $table->string('status');
             $table->timestamp('orderDate')->now();
             $table->string('paymentMode');

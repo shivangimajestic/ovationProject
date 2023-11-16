@@ -18,7 +18,7 @@ class OrdersFactory extends Factory
     {
         return [
             'orderNumber'=> $this->faker->unique()->numerify('OV-######'),
-            'orderDetails'=> $this->faker->sentence(3),
+            'orderDetails'=> $this->faker->sentence(),
             'status'=> $this->faker->randomElement(['Order Placed', 'Shipped', 'Out for Delivery']),
             'orderDate'=> $this->faker->dateTime(),
             'paymentMode'=> $this->faker->randomElement(['UPI', 'Credit Card', 'Cash on Delivery']),
