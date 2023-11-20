@@ -6,6 +6,9 @@ use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserrolesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,22 +73,16 @@ Route::get('admin/orders/index', [OrdersController::class, 'index']);
 Route::get('admin/orders/view/{id}', [OrdersController::class, 'show']);
 
 
+/*CHANGES */
+Route::get('/admin/userroles/index', [UserrolesController::class, 'index']);
+// Route::group(['middleware' => ['auth']], function() {
+//     Route::resource('roles', RoleController::class);
+//     Route::resource('users', UserController::class);
+//     Route::resource('products', ProductController::class);})
+/*CHANGES */
 
 
 
 
 
 
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-require __DIR__.'/auth.php';

@@ -101,8 +101,15 @@
 						<div class="parent-icon"><i class="bi bi-receipt-cutoff"></i>
 						</div>
 						<div class="menu-title">Orders/Bills</div>
-					</a>
-					
+					</a>					
+				</li>
+
+				<li>
+					<a  href="{{url('admin/userroles/index')}}">
+						<div class="parent-icon"><i class="bi bi-receipt-cutoff"></i>
+						</div>
+						<div class="menu-title">User roles </div>
+					</a>					
 				</li>
 				
 				
