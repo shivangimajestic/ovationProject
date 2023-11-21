@@ -75,7 +75,7 @@
 					<div class="card-body">            
 						<div class="table-responsive">
 							
-							<select name="User-Roles" id="User-Roles" style ="width: %; height:30px; margin:10px;">
+							<select name="User-Roles" id="User-Roles" style ="width: 98%; height:30px; margin:10px;">
 								<option value="">Select User Role</option>
 								<option value="Admin">Admin</option>
 								<option value="Sub-Admin">Sub-Admin</option>

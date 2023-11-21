@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\userroles;
+use App\Models\dashboard;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreuserrolesRequest;
-use App\Http\Requests\UpdateuserrolesRequest;
+use App\Http\Requests\StoredashboardRequest;
+use App\Http\Requests\UpdatedashboardRequest;
 
-class UserrolesController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
-        return view('admin/userroles/index' );
+        return view('admin/dashboard/index' );
         //
     }
 
@@ -30,7 +29,7 @@ class UserrolesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreuserrolesRequest $request)
+    public function store(StoredashboardRequest $request)
     {
         //
     }
@@ -38,7 +37,7 @@ class UserrolesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(userroles $userroles)
+    public function show(dashboard $dashboard)
     {
         //
     }
@@ -46,7 +45,7 @@ class UserrolesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(userroles $userroles)
+    public function edit(dashboard $dashboard)
     {
         //
     }
@@ -54,7 +53,7 @@ class UserrolesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateuserrolesRequest $request, userroles $userroles)
+    public function update(UpdatedashboardRequest $request, dashboard $dashboard)
     {
         //
     }
@@ -62,7 +61,7 @@ class UserrolesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(userroles $userroles)
+    public function destroy(dashboard $dashboard)
     {
         //
     }
