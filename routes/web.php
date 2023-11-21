@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserrolesController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,6 +76,7 @@ Route::get('admin/orders/view/{id}', [OrdersController::class, 'show']);
 
 /*CHANGES */
 Route::get('/admin/userroles/index', [UserrolesController::class, 'index']);
+Route::get('/admin/dashboard/index', [DashboardController::class, 'index']);
 // Route::group(['middleware' => ['auth']], function() {
 //     Route::resource('roles', RoleController::class);
 //     Route::resource('users', UserController::class);
