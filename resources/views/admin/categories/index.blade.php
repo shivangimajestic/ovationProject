@@ -52,7 +52,7 @@
 								<tbody>
                                     @foreach($categories as $item)
                                     <tr>
-                                        <td><img src="{{$item->categoryImage}}" alt="Image Description"style="border-radius: 5px;"></td>
+                                        <td><img src="{{$item->categoryImage}}" alt="Category Image"style="border-radius: 5px;"></td>
                                         <td>{{$item->categoryName}}</td>
                                         <td>{{$item->categoryDetails}}</td>
                                         <td>
