@@ -50,7 +50,7 @@
 			<!--navigation-->
 			<ul class="metismenu menu" id="menu">
 				<li>
-				<a href="javascript:;" >
+				<a href="{{url('admin/dashboard/index')}}">
 						<div class="parent-icon">
                         <i class="bi bi-layout-sidebar"></i>
 						</div>

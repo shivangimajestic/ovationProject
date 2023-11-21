@@ -11,7 +11,7 @@
 		margin:15px; */
 	}
 	th,td {
-		/* width:25%; */
+		/* width:25%;; */
 		/* border: 1px solid #cecfd5; */
 		padding: 10px 15px;
 		width: 1%;
@@ -26,9 +26,7 @@
 		.column {
 			float: left;
 			width: 50%;
-			padding: 5px;
-			border : 1px solid black;
-			
+			padding: 5px;	
 		}
 
 </style>
@@ -58,7 +56,7 @@
 				<div class="card-body">            
 					<div class="table-responsive">
 						<div class="row">
-							<div class="column">
+							<div class="column" style="width:25%;">
 								<table style="h:100%">
 									<tr>
 										<td>
@@ -69,7 +67,7 @@
 									</tr>
 								</table>
 							</div>
-							<div class="column">
+							<div class="column" style="width:25%;">
 								<table style="h:100%">
 									<tr>
 										<td>
@@ -80,7 +78,7 @@
 									</tr>
 								</table>
 							</div>
-							<div class="column">
+							<div class="column" style="width:25%;">
 								<table style="h:100%">
 									<tr>
 										<td>
@@ -91,7 +89,7 @@
 									</tr>
 								</table>
 							</div>
-							<div class="column">
+							<div class="column" style="width:25%;">
 								<table style="h:100%">
 									<tr>
 										<td>
@@ -104,7 +102,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="column">
+							<div class="column" style="width:25%;">
 								<table style="h:100%">
 									<tr>
 										<td>
@@ -176,6 +174,7 @@
 									</tr>
 								</table>
 							</div>
+							
 						</div>
 						
 							
